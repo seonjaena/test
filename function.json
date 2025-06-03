@@ -5,7 +5,7 @@
       "name": "changes",
       "type": "sqlTrigger",
       "direction": "in",
-      "tableName": "dbo.test_nato2",
+      "tableName": "[dbo].[test_nato2]",
       "connectionStringSetting": "SqlConnectionString"
     }
   ]
