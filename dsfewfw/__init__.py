@@ -2,7 +2,7 @@ import json
 import logging
 import azure.functions as func
 
-def main(changes) -> func.HttpResponse:
+def main(changes): 
     #body = json.loads(req.get_body())
     #row = func.SqlRow.from_dict(body)
     #logging.info(body)
