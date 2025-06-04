@@ -2,10 +2,17 @@ import json
 import logging
 import azure.functions as func
 
-def main(changes: func.SqlRowList): 
+def main(req: func.HttpRequest, product: func.Out[func.SqlRow]) -> func.HttpResponse:
     try:
-        for change in changes:
-            logging.info(change)
+        body = json.loads(req.get_body())
+        row = func.SqlRow.from_dict(body)
+        product.set(row)
+
+        return func.HttpResponse(
+            body=req.get_body(),
+            status_code=201,
+            mimetype="application/json"
+        )
     except Exception as e: 
         logger.error(e)
 
