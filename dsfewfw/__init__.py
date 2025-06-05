@@ -7,7 +7,7 @@ def main(changes):
     for change in change_li: 
         print(change)
         if change['Operation'] == 0: 
-            logging.info("THIS IS INSERT")
-            logging.info("SQL Change: %s", change)
+            logging.info("THIS IS A INSERT")
+            logging.info("SQL IS Change: %s", change)
         else:
-            logging.info("THIS IS NOT INSERT")
+            logging.info("THIS IS NOT A INSERT")
