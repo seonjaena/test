@@ -10,4 +10,4 @@ app = func.FunctionApp()
                         table_name="test_nato2",
                         connection_string_setting="SqlConnectionString")
 def todo_trigger(change: str) -> None:
-    logging.info("SQL Changes: %s", json.loads(change))
+    logging.info("SQLs Changes: %s", json.loads(change))
